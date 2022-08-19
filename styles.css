@@ -43,7 +43,125 @@ img{
 
 .header{
   grid-area: 1/2/2/-1;
+  background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 2fr 100px 1fr;
+  align-items: center;
+  align-content: center;
+  padding: 0 1rem;
 }
+
+/* search bar */
+
+.header .search{
+  /*background: red;*/
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.search label{
+  justify-self: center;
+}
+
+.search label i{
+  font-size: 1.3rem;
+}
+
+.search input{
+  background: #e2e8f0;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.025rem;
+  padding: .3rem 1rem;
+}
+
+/* notif bell*/
+
+.header .notification{
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  /*background: blue;*/
+  justify-self: end;
+}
+
+/* profile */
+
+.header .profile{
+  /*background: green;*/
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-column-gap: 2rem;
+  align-items: center;
+  justify-self: end;
+  margin-right: 2rem;
+}
+
+.profile img{
+  border-radius: 50%;
+}
+
+.profile a{
+  display: flex;
+  column-gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* profile details */
+
+.header .profile-details{
+  /*background: purple;*/
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 4fr;
+  font-weight: bold;
+  font-size: .9rem;
+  margin-left: 2rem;
+}
+
+.profile-details img{
+  border-radius: 50%;
+}
+
+.profile-details h1{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+/* buttons */
+
+.header .buttons{
+  /*background: magenta;*/
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  margin-right: 2rem;
+}
+
+.buttons button{
+  padding: .4rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: .4px;
+  text-transform: capitalize;
+  color: #fff;
+  background: #1992d4;
+  cursor: pointer;
+}
+
+
+
 
 /***************
  side nav styles
@@ -103,4 +221,6 @@ img{
 
 .main-content{
   grid-area: 2/2/-1/-1;
+  text-align: center;
+  background: #e2e8f0;
 }
